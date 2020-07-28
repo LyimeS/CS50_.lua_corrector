@@ -19,8 +19,10 @@ def title (txt):
 # dictionary of terms to be corrected
 #=============================
 terms = {
-	"getPixelScale": "getDPIScale",
-	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)"
+	"getPixelScale": "getDPIScale", 
+	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
+	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
+	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
 }
 
 #=============================
