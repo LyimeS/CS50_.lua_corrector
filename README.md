@@ -1,4 +1,4 @@
-# CS50.lua corrector
+# CS50 .lua corrector
 A python script to update the .lua files shared by CS50 to be read by Löve2D 11.3
 
 # What you should know before using it:
@@ -14,14 +14,18 @@ A python script to update the .lua files shared by CS50 to be read by Löve2D 11
 Let's suppose you want to correct the files from the [mario-demo](https://github.com/cs50/mario-demo) game. You'll download the folder *mario-demo* containing 25 folders + 2 files. The *correct.py* should be pasted in *mario-demo*.
 ### Why?
 This script will open all files in *mario-demo*, and all files in the subfolders "lovedemo", "mario-0", "mario-0-exercise", "mario-1", and so on. **Please note:** It won't search for the files in the subfolders of those subfolders. e.g.:  
-`mario-demo > lovedemo > graphics`  
-this script will read the files in "mario-demo" and "lovedemo", but it will **not** look inside the "graphics" folder.
+`mario-demo / lovedemo / graphics`  
+this script will read the files in *"mario-demo"* and *"lovedemo"*, but it will **not** look inside the *"graphics"* folder, until I found some reason to do so. 
+
+## What was I supposed to see in its output?
+Blocks containing the files the script was able to read, and what happened to them. Like this:
+![output sample.png](output sample.png)
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
 * pong
 * fifty-bird
-* mario-demo (Testing is nearing completion)
+* mario-demo
 
 ## I have found a bug.
 Well, I'm sorry to hear that. Feel free to report it in "Issues" section, but I just need you to keep mind that my programming skills are just like my art skills: almost nonexistent. So it might take a while before I can solve it (if I'm able to do so. Please root for me).
