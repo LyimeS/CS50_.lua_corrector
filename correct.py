@@ -20,7 +20,8 @@ def title (txt):
 #=============================
 terms = {
 	"getPixelScale": "getDPIScale",
-	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)"
+	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",
+	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)",
 }
 
 #=============================
