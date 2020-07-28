@@ -120,7 +120,8 @@ for subfolder in folders:
 			print(f"{file_} found in subfolder: ", end="")
 			#print(path + folder + "/" + file_)
 			file_correction(path + "/" + subfolder + "/" + file_)
-	
+
+#get a function to search the sub-subfolders ¬¬'
 
 ##############################
 # The end:
