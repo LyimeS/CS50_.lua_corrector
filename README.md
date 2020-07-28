@@ -18,8 +18,7 @@ This script will open all files in *mario-demo*, and all files in the subfolders
 this script will read the files in *"mario-demo"* and *"lovedemo"*, but it will **not** look inside the *"graphics"* folder, until I found some reason to do so. 
 
 ## What was I supposed to see in its output?
-Blocks containing the files the script was able to read, and what happened to them. Like this:
-![output sample.png](output sample.png)
+Blocks containing the files the script was able to read, and what happened to them. 
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
