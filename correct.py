@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*- 
 
 import os
+import glob
 
 #########################################################
 # FORMAT Title
 #########################################################
 def title (txt):
-	print("-" * len(txt))
-	print("\033[45m", end="")
-	print(txt, end="")
+	print("-" * len(txt), end="--\n")
+	print("\033[44m", end="")
+	print(" " + txt + " ", end="")
 	print("\033[m")
-	print("-" * len(txt))
+	print("-" * len(txt), end="--\n")
 
 #########################################################
 # File correction
@@ -64,7 +65,7 @@ def file_correction(file_path):
 			print("\033[32mLine corrected successfully.\033[m")
 		
 		else:
-			print("\033[33mNo line to be corrected found.\033[m")
+			print("\033[33mNo lines to be corrected were found.\033[m")
 	
 	except:
 		global errors
@@ -79,57 +80,58 @@ def file_correction(file_path):
 path = os.getcwd()
 itens = os.listdir(path)
 
+
+if "\\" in path:		#it will work differently in Windows or Unix-like operating systems
+	back_slash = "\\"
+else:
+	back_slash = "/"
+
+
 files = list()
 folders = list()
 
-for item in itens:
+
+for item in itens:		# It will be used to create the titles on output
 	if os.path.isdir(item):
-		#print(f"{item} is a directory")
 		folders.append(item)
 	
-	elif os.path.isfile(item):
-		#print(f"{item} is a file")
+	elif os.path.isfile(item): 	#It will be used to run the script in the main folder
 		files.append(item)
-		
-	else:
-		print(f"Error: I don't know what the hell is {item}.") #I've never seen this error happening. it might be useless.
-
-print(f"found {len(files) -1} files and {len(folders)} subfolders.")
-
-
+	
 
 #=============================
 # correct the files in the main folder
 #=============================
+title(path)
 for file_ in files:
 	if file_ != __file__:		#prevents the script of rewriting itself.
-		print(f"{file_} found in this folder: ", end="")
-		file_correction(path + "/" + file_)
+		print(f"{file_}", end=" -> ")
+		file_correction(path + back_slash + file_)		#call the function to correct the file
+
 
 
 #=============================
 # correct the files in the subfolders
-#=============================
-for subfolder in folders:
-	files_subfolder = os.listdir(subfolder)
-	
-	title(subfolder)
-	
-	for file_ in files_subfolder:
-		if os.path.isfile(path + "/" + subfolder + "/" + file_):
-			print(f"{file_} found in subfolder: ", end="")
-			#print(path + folder + "/" + file_)
-			file_correction(path + "/" + subfolder + "/" + file_)
+#=============================	
+# **/       every file and dir under "path"
+# *.txt     every file that ends with '.lua'
+files_subfolder = glob.glob(path + '/**/*.lua', recursive=True) #search for all .lua files in the subfolders
 
-#get a function to search the sub-subfolders ¬¬'
+for folder in folders:
+	title(folder)		#create a title in output with the 
+	for file_ in files_subfolder:
+		if file_.replace(path, "")[0:len(folder) + 1] == back_slash + folder: 		#compare the name of the folder and the path to the file.
+			print(file_.replace(path, ""), end=" -> ")
+			file_correction(file_)		#call the function to correct the file
+
 
 ##############################
 # The end:
 ##############################
 if errors == 0:
-	print("\n\n\n\033[32mI'm done :)\033[m")
+	print("\n\n\033[32mI'm done :)\033[m")
 	
 else:
-	print(f"\n\n\n\033[33mI'm done, but #{errors} error(s) were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
+	print(f"\n\n\033[33mI'm done, but #{errors} error(s) were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
 
 
