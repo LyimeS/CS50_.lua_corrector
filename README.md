@@ -2,10 +2,10 @@
 A python script to update the .lua files shared by CS50 to be read by Löve2D 11.3
 
 # What you should know before using it:
-* This script runs using Python 3 and its built-in packages, so as long as you have Python 3 installed, you're good to go.
-* It was made thinking to run in Linux. It should be working fine in Windows and MacOS, but I didn't test it yet.
-* It is a good idea to have a backup of the files before running this script. Even though it should be safe to run it... you know... But if the worst happens, you can download it again, right?
-* It is also a good idea not to keep the files we're correcting open in an IDE or in Löve2D while the script is running.
+* This script runs using Python 3 and its built-in packages.
+* It was made thinking to run in Linux. It should be working fine in Windows and MacOS by now, but I didn't test it yet.
+* It is a good practice to have a backup of the files before running this script. Even though it should be safe to run it... you know... But if the worst happens, you can download it again, right?
+* It is also a good practice not to keep the files we're correcting open in an IDE or in Löve2D while the script is running.
 
 # How to use it:
 1. Paste the script *correct.py* in the main directory of a project shared by CS50, or a folder that contains it. <sup>(see instructions bellow)</sup>
@@ -13,7 +13,7 @@ A python script to update the .lua files shared by CS50 to be read by Löve2D 11
 
 ## The meaning of "main directory" in here:
 Let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project. The *correct.py* script should be pasted in the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....) or the folder that contains the *pong* among other CS50 projects. Just keep in mind that if you paste it in a folder containing all the projects from CS50, it may take a while to correct all the files.  
-In case of this folder containing other .lua files (or folders that contains .lua files) that are not from CS50, these files will be scanned too, and if the script find the pattern to correct in those files, it will try to correct them. Are you sure you want that to happen?
+In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the pattern to correct in those files, it will try to correct them. Are you sure you want that to happen?
 
 ## What was I supposed to see in its output?
 Blocks containing the .lua files the script was able to read, and what happened to them. 
@@ -22,7 +22,7 @@ Blocks containing the .lua files the script was able to read, and what happened 
 ## What projects from CS50 does this script corrects?
 * pong
 * fifty-bird
-* breakout (currently in testing)
+* breakout (currently in testing) (some deprecated lines yet to be corrected, but the games are still working)
 * mario-demo
 
 ## I have found a bug.

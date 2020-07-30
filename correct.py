@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # -*- coding: utf-8 -*- 
 
 import os
@@ -24,6 +25,24 @@ terms = {
 	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
 	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
 	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
+	"love.audio.newSource('sounds/paddle_hit.wav')" : "love.audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/confirm.wav')" : "love.audio.newSource('sounds/confirm.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/select.wav')" : "love.audio.newSource('sounds/select.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/no-select.wav')" : "love.audio.newSource('sounds/no-select.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/brick-hit-1.wav')" : "love.audio.newSource('sounds/brick-hit-1.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/brick-hit-2.wav')" : "love.audio.newSource('sounds/brick-hit-2.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/hurt.wav')" : "love.audio.newSource('sounds/hurt.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/victory.wav')" : "love.audio.newSource('sounds/victory.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/recover.wav')" : "love.audio.newSource('sounds/recover.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/high_score.wav')" : "love.audio.newSource('sounds/high_score.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/pause.wav')" : "love.audio.newSource('sounds/pause.wav', 'static')", #Breakout
+    "love.audio.newSource('sounds/music.wav')" : "love.audio.newSource('sounds/music.wav', 'static')", #Breakout
+    "love.graphics.setColor(103, 255, 255, 255)":"love.graphics.setColor(103/255, 255/255, 255/255, 255/255)", #Breakout
+    #find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
+    "self.psystem:setAreaSpread('normal', 10, 10)" : "self.psystem:setEmissionArea('normal', 10, 10)", #Breakout
+
 }
 
 #=============================
@@ -51,7 +70,10 @@ def file_correction(file_path):
 
 
 	except:
-		print("\033[31mNot a readable file.\033[m")		#files like png, wav and etc. are not readable
+		# files like png, wav and etc. are not readable. 
+		# It is still useful to handle the files read by the "correct the files in the main folder"
+		# DO NOT DELETE THIS!
+		print("\033[31mNot a readable file.\033[m")
 		return
 	
 
@@ -62,10 +84,10 @@ def file_correction(file_path):
 				data.write(line)
 			
 			data.close()
-			print("\033[32mLine corrected successfully.\033[m")
+			print("\033[33mLine corrected successfully.\033[m")
 		
 		else:
-			print("\033[33mNo lines to be corrected were found.\033[m")
+			print("\033[32mNo corrections needed\033[m")
 	
 	except:
 		global errors
