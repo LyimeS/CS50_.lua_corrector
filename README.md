@@ -16,7 +16,8 @@ Let's suppose you want to correct the files from the [pong](https://github.com/g
 In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the pattern to correct in those files, it will try to correct them. Are you sure you want that to happen?
 
 ## What was I supposed to see in its output?
-Blocks containing the .lua files the script was able to read, and what happened to them. 
+Blocks containing the .lua files the script was able to read, and what happened to them.  
+![Like this](output_sample.png)
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
