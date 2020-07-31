@@ -20,11 +20,13 @@ Blocks containing the .lua files the script was able to read, and what happened 
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
-* pong
-* fifty-bird
-* breakout (currently in testing) (some deprecated lines yet to be corrected, but the games are still working)
-* mario-demo
+* [pong](https://github.com/games50/pong)
+* [fifty-bird](https://github.com/games50/fifty-bird)
+* [breakout](https://github.com/games50/breakout) <sup>(1 - see notes bellow)</sup>
+* [mario-demo](https://github.com/cs50/mario-demo)
+* (more to come)
 
+\* <sub>1 - some deprecated lines yet to be corrected from breakout 10 to 13, as seen in class video. but the games are still working</sub>
 ## I have found a bug.
 Well, I'm sorry to hear that. Feel free to report it in "Issues" section, but I just need you to keep mind that my programming skills are just like my art skills: almost nonexistent. So it might take a while before I can solve it (if I'm able to do so. Please root for me).
 
