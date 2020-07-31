@@ -2,34 +2,37 @@
 A python script to update the .lua files shared by CS50 to be read by Löve2D 11.3
 
 # What you should know before using it:
-* This script runs using Python 3. 
-* I intend to port this script to Windows, but, right now, it is only working in Linux (and maybe in MacOS, but I didn't test it).
-* It is a good idea to have a backup of the files before running this script. It should be safe to run it, but... you know... just in case. Or you can download the files again from GitHub. That's up to you. 
+* This script runs using Python 3 and its built-in packages.
+* It was made thinking to run in Linux. It should be working fine in Windows and MacOS by now, but I didn't test it yet.
+* It is a good practice to have a backup of the files before running this script. Even though it should be safe to run it... you know... But if the worst happens, you can download it again, right?
+* It is also a good practice not to keep the files we're correcting open in an IDE or in Löve2D while the script is running.
 
 # How to use it:
-1. Paste the script *correct.py* in the main directory of a project shared by CS50 <sup>(see notes bellow)</sup>
+1. Paste the script *correct.py* in the main directory of a project shared by CS50, or a folder that contains it. <sup>(see instructions bellow)</sup>
 2. Run the script. Open the main directory in terminal and type `python3 "correct.py"` 
 
 ## The meaning of "main directory" in here:
-Let's suppose you want to correct the files from the [mario-demo](https://github.com/cs50/mario-demo) game. You'll download the folder *mario-demo* containing 25 folders + 2 files. The *correct.py* should be pasted in *mario-demo*.
-### Why?
-This script will open all files in *mario-demo*, and all files in the subfolders "lovedemo", "mario-0", "mario-0-exercise", "mario-1", and so on. **Please note:** It won't search for the files in the subfolders of those subfolders. e.g.:  
-`mario-demo / lovedemo / graphics`  
-this script will read the files in *"mario-demo"* and *"lovedemo"*, but it will **not** look inside the *"graphics"* folder, until I found some reason to do so. 
+Let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project. The *correct.py* script should be pasted in the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....) or the folder that contains the *pong* among other CS50 projects. Just keep in mind that if you paste it in a folder containing all the projects from CS50, it may take a while to correct all the files.  
+In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the pattern to correct in those files, it will try to correct them. Are you sure you want that to happen?
 
 ## What was I supposed to see in its output?
-Blocks containing the files the script was able to read, and what happened to them. 
+Blocks containing the .lua files the script was able to read, and what happened to them.  
+![Like this](output_sample.png)
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
-* pong
-* fifty-bird
-* mario-demo
+* [pong](https://github.com/games50/pong)
+* [fifty-bird](https://github.com/games50/fifty-bird)
+* [breakout](https://github.com/games50/breakout) <sup>(1 - see notes bellow)</sup>
+* [mario-demo](https://github.com/cs50/mario-demo)
+* (more to come)
 
+\* <sub>1 - some deprecated lines yet to be corrected from breakout 10 to 13, as seen in class video. but the games are still working</sub>
 ## I have found a bug.
 Well, I'm sorry to hear that. Feel free to report it in "Issues" section, but I just need you to keep mind that my programming skills are just like my art skills: almost nonexistent. So it might take a while before I can solve it (if I'm able to do so. Please root for me).
 
-## Why, in Merlin's name, did you do this extension?
+## Wouldn't it be easier/faster to download the files from another source?
+YES!!!! FOR MERLIN'S SAKE, YES!! But I wouldn't learn Python...
 
 ## Do you call that garbage as "code"?
 "I'm not a real programmer, I just glue stuff together"
