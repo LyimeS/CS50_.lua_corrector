@@ -43,19 +43,19 @@ terms = {
     "self.psystem:setAreaSpread('normal', 10, 10)" : "self.psystem:setEmissionArea('normal', 10, 10)", #Breakout
     "['r'] = 99,":"['r'] = 99/255,", #Breakout
     "['g'] = 155,":"['g'] = 155/255,", #Breakout
-    "['b'] = 255":"['b'] = 1,", #Breakout
+    "['b'] = 255\n":"['b'] = 255/255\n,", #Breakout
     "['r'] = 106,":"['r'] = 106/255,", #Breakout
     "['g'] = 190,":"['g'] = 190/255,", #Breakout
-    "['b'] = 47":"['b'] = 47/255", #Breakout
+    "['b'] = 47\n":"['b'] = 47/255\n", #Breakout
     "['r'] = 217,":"['r'] = 217/255,", #Breakout
     "['g'] = 87,":"['g'] = 87/255,", #Breakout
-    "['b'] = 99":"['b'] = 99/255", #Breakout
+    "['b'] = 99\n":"['b'] = 99/255\n", #Breakout
     "['r'] = 215,":"['r'] = 215/255,", #Breakout
     "['g'] = 123,":"['g'] = 123/255,", #Breakout
-    "['b'] = 186":"['b'] = 186/255", #Breakout
+    "['b'] = 186\n":"['b'] = 186/255\n", #Breakout
     "['r'] = 251,":"['r'] = 251/255,", #Breakout
     "['g'] = 242,":"['g'] = 242/255,", #Breakout
-    "['b'] = 54":"['b'] = 54/255", #Breakout
+    "['b'] = 54\n":"['b'] = 54/255\n", #Breakout
     #find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
     #find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
 
