@@ -60,6 +60,15 @@ terms = {
 	#find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
 	"opacity = 0" : "opacity = 0/255", #match3
 	"love.graphics.setColor(255, 255, 255, bird.opacity)" : "love.graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
+	"love.graphics.setColor(255, 255, 255, 128)" : "love.graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
+	"love.graphics.setColor(255, 0, 0, 234)" : "love.graphics.setColor(255/255, 0, 0, 234/255)", #match3
+	"love.audio.newSource('sounds/music3.mp3')" : "love.audio.newSource('sounds/music3.mp3', 'static')", #match3
+	"love.audio.newSource('sounds/error.wav')" : "love.audio.newSource('sounds/error.wav', 'static')", #match3
+	"love.audio.newSource('sounds/match.wav')" : "love.audio.newSource('sounds/match.wav', 'static')", #match3
+	"love.audio.newSource('sounds/clock.wav')" : "love.audio.newSource('sounds/clock.wav', 'static')", #match3
+	"love.audio.newSource('sounds/game-over.wav')" : "love.audio.newSource('sounds/game-over.wav', 'static')", #match3
+	"love.audio.newSource('sounds/next-level.wav')" : "love.audio.newSource('sounds/next-level.wav', 'static')", #match3
+
 
 }
 
