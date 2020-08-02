@@ -68,7 +68,22 @@ terms = {
 	"love.audio.newSource('sounds/clock.wav')" : "love.audio.newSource('sounds/clock.wav', 'static')", #match3
 	"love.audio.newSource('sounds/game-over.wav')" : "love.audio.newSource('sounds/game-over.wav', 'static')", #match3
 	"love.audio.newSource('sounds/next-level.wav')" : "love.audio.newSource('sounds/next-level.wav', 'static')", #match3
-
+	"[1] = {217, 87, 99, 255}" : "[1] = {217/255, 87/255, 99/255, 255/255}", #match3
+	"[2] = {95, 205, 228, 255}" : "[2] = {95/255, 205/255, 228/255, 255/255}", #match3
+	"[3] = {251, 242, 54, 255}" : "[3] = {251/255, 242/255, 54/255, 255/255}", #match3
+	"[4] = {118, 66, 138, 255}" : "[4] = {118/255, 66/255, 138/255, 255/255}", #match3
+	"[5] = {153, 229, 80, 255}" : "[5] = {153/255, 229/255, 80/255, 255/255}", #match3
+	"[6] = {223, 113, 38, 255}" : "[6] = {223/255, 113/255, 38/255, 255/255}", #match3
+	"love.graphics.setColor(0, 0, 0, 128)" : "love.graphics.setColor(0, 0, 0, 128/255)", #match3
+	"love.graphics.setColor(99, 155, 255, 255)" : "love.graphics.setColor(99/255, 155/255, 255/255, 255/255)", #match3
+	"love.graphics.setColor(48, 96, 130, 255)" : "love.graphics.setColor(48/255, 96/255, 130/255, 255/255)", #match3
+	"love.graphics.setColor(34, 32, 52, 255)" : "love.graphics.setColor(34/255, 32/255, 52/255, 255/255)", #match3
+	"love.graphics.setColor(95, 205, 228, 200)" : "love.graphics.setColor(95/255, 205/255, 228/255, 200/255)", #match3
+	"love.graphics.setColor(255, 255, 255, self.transitionAlpha)" : "love.graphics.setColor(255/255, 255/255, 255/255, self.transitionAlpha/255)", #match3
+	"love.graphics.setColor(255, 255, 255, 96)" : "love.graphics.setColor(255/255, 255/255, 255/255, 96/255)", #match3
+	"love.graphics.setColor(217, 87, 99, 255)" : "love.graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
+	"love.graphics.setColor(172, 50, 50, 255)" : "love.graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
+	"love.graphics.setColor(56, 56, 56, 234)" : "love.graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
 
 }
 
