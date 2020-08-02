@@ -100,10 +100,10 @@ def file_correction(file_path):
 				data.write(line)
 			
 			data.close()
-			print("\033[33mLine corrected successfully.\033[m")
+			print("\033[33mLine/s corrected successfully.\033[m")
 		
 		else:
-			print("\033[32mNo corrections needed\033[m")
+			print("\033[32mNo corrections needed.\033[m")
 	
 	except:
 		global errors
@@ -170,6 +170,6 @@ if errors == 0:
 	print("\n\n\033[32mI'm done :)\033[m")
 	
 else:
-	print(f"\n\n\033[33mI'm done, but #{errors} error(s) were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
+	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
 
 
