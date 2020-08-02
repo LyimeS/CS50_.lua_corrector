@@ -26,38 +26,64 @@ terms = {
 	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
 	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
 	"love.audio.newSource('sounds/paddle_hit.wav')" : "love.audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/confirm.wav')" : "love.audio.newSource('sounds/confirm.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/select.wav')" : "love.audio.newSource('sounds/select.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/no-select.wav')" : "love.audio.newSource('sounds/no-select.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/brick-hit-1.wav')" : "love.audio.newSource('sounds/brick-hit-1.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/brick-hit-2.wav')" : "love.audio.newSource('sounds/brick-hit-2.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/hurt.wav')" : "love.audio.newSource('sounds/hurt.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/victory.wav')" : "love.audio.newSource('sounds/victory.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/recover.wav')" : "love.audio.newSource('sounds/recover.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/high_score.wav')" : "love.audio.newSource('sounds/high_score.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/pause.wav')" : "love.audio.newSource('sounds/pause.wav', 'static')", #Breakout
-    "love.audio.newSource('sounds/music.wav')" : "love.audio.newSource('sounds/music.wav', 'static')", #Breakout
-    "love.graphics.setColor(103, 255, 255, 255)":"love.graphics.setColor(103/255, 255/255, 255/255, 255/255)", #Breakout
-    "self.psystem:setAreaSpread('normal', 10, 10)" : "self.psystem:setEmissionArea('normal', 10, 10)", #Breakout
-    "['r'] = 99,":"['r'] = 99/255,", #Breakout
-    "['g'] = 155,":"['g'] = 155/255,", #Breakout
-    "['b'] = 255\n":"['b'] = 255/255\n,", #Breakout
-    "['r'] = 106,":"['r'] = 106/255,", #Breakout
-    "['g'] = 190,":"['g'] = 190/255,", #Breakout
-    "['b'] = 47\n":"['b'] = 47/255\n", #Breakout
-    "['r'] = 217,":"['r'] = 217/255,", #Breakout
-    "['g'] = 87,":"['g'] = 87/255,", #Breakout
-    "['b'] = 99\n":"['b'] = 99/255\n", #Breakout
-    "['r'] = 215,":"['r'] = 215/255,", #Breakout
-    "['g'] = 123,":"['g'] = 123/255,", #Breakout
-    "['b'] = 186\n":"['b'] = 186/255\n", #Breakout
-    "['r'] = 251,":"['r'] = 251/255,", #Breakout
-    "['g'] = 242,":"['g'] = 242/255,", #Breakout
-    "['b'] = 54\n":"['b'] = 54/255\n", #Breakout
-    #find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
-    #find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
+	"love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/confirm.wav')" : "love.audio.newSource('sounds/confirm.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/select.wav')" : "love.audio.newSource('sounds/select.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/no-select.wav')" : "love.audio.newSource('sounds/no-select.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/brick-hit-1.wav')" : "love.audio.newSource('sounds/brick-hit-1.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/brick-hit-2.wav')" : "love.audio.newSource('sounds/brick-hit-2.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/hurt.wav')" : "love.audio.newSource('sounds/hurt.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/victory.wav')" : "love.audio.newSource('sounds/victory.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/recover.wav')" : "love.audio.newSource('sounds/recover.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/high_score.wav')" : "love.audio.newSource('sounds/high_score.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/pause.wav')" : "love.audio.newSource('sounds/pause.wav', 'static')", #Breakout
+	"love.audio.newSource('sounds/music.wav')" : "love.audio.newSource('sounds/music.wav', 'static')", #Breakout
+	"love.graphics.setColor(103, 255, 255, 255)":"love.graphics.setColor(103/255, 255/255, 255/255, 255/255)", #Breakout
+	"self.psystem:setAreaSpread('normal', 10, 10)" : "self.psystem:setEmissionArea('normal', 10, 10)", #Breakout
+	"['r'] = 99,":"['r'] = 99/255,", #Breakout
+	"['g'] = 155,":"['g'] = 155/255,", #Breakout
+	"['b'] = 255\n":"['b'] = 255/255\n,", #Breakout
+	"['r'] = 106,":"['r'] = 106/255,", #Breakout
+	"['g'] = 190,":"['g'] = 190/255,", #Breakout
+	"['b'] = 47\n":"['b'] = 47/255\n", #Breakout
+	"['r'] = 217,":"['r'] = 217/255,", #Breakout
+	"['g'] = 87,":"['g'] = 87/255,", #Breakout
+	"['b'] = 99\n":"['b'] = 99/255\n", #Breakout
+	"['r'] = 215,":"['r'] = 215/255,", #Breakout
+	"['g'] = 123,":"['g'] = 123/255,", #Breakout
+	"['b'] = 186\n":"['b'] = 186/255\n", #Breakout
+	"['r'] = 251,":"['r'] = 251/255,", #Breakout
+	"['g'] = 242,":"['g'] = 242/255,", #Breakout
+	"['b'] = 54\n":"['b'] = 54/255\n", #Breakout
+	#find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
+	#find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
+	"opacity = 0" : "opacity = 0/255", #match3
+	"love.graphics.setColor(255, 255, 255, bird.opacity)" : "love.graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
+	"love.graphics.setColor(255, 255, 255, 128)" : "love.graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
+	"love.graphics.setColor(255, 0, 0, 234)" : "love.graphics.setColor(255/255, 0, 0, 234/255)", #match3
+	"love.audio.newSource('sounds/music3.mp3')" : "love.audio.newSource('sounds/music3.mp3', 'static')", #match3
+	"love.audio.newSource('sounds/error.wav')" : "love.audio.newSource('sounds/error.wav', 'static')", #match3
+	"love.audio.newSource('sounds/match.wav')" : "love.audio.newSource('sounds/match.wav', 'static')", #match3
+	"love.audio.newSource('sounds/clock.wav')" : "love.audio.newSource('sounds/clock.wav', 'static')", #match3
+	"love.audio.newSource('sounds/game-over.wav')" : "love.audio.newSource('sounds/game-over.wav', 'static')", #match3
+	"love.audio.newSource('sounds/next-level.wav')" : "love.audio.newSource('sounds/next-level.wav', 'static')", #match3
+	"[1] = {217, 87, 99, 255}" : "[1] = {217/255, 87/255, 99/255, 255/255}", #match3
+	"[2] = {95, 205, 228, 255}" : "[2] = {95/255, 205/255, 228/255, 255/255}", #match3
+	"[3] = {251, 242, 54, 255}" : "[3] = {251/255, 242/255, 54/255, 255/255}", #match3
+	"[4] = {118, 66, 138, 255}" : "[4] = {118/255, 66/255, 138/255, 255/255}", #match3
+	"[5] = {153, 229, 80, 255}" : "[5] = {153/255, 229/255, 80/255, 255/255}", #match3
+	"[6] = {223, 113, 38, 255}" : "[6] = {223/255, 113/255, 38/255, 255/255}", #match3
+	"love.graphics.setColor(0, 0, 0, 128)" : "love.graphics.setColor(0, 0, 0, 128/255)", #match3
+	"love.graphics.setColor(99, 155, 255, 255)" : "love.graphics.setColor(99/255, 155/255, 255/255, 255/255)", #match3
+	"love.graphics.setColor(48, 96, 130, 255)" : "love.graphics.setColor(48/255, 96/255, 130/255, 255/255)", #match3
+	"love.graphics.setColor(34, 32, 52, 255)" : "love.graphics.setColor(34/255, 32/255, 52/255, 255/255)", #match3
+	"love.graphics.setColor(95, 205, 228, 200)" : "love.graphics.setColor(95/255, 205/255, 228/255, 200/255)", #match3
+	"love.graphics.setColor(255, 255, 255, self.transitionAlpha)" : "love.graphics.setColor(255/255, 255/255, 255/255, self.transitionAlpha/255)", #match3
+	"love.graphics.setColor(255, 255, 255, 96)" : "love.graphics.setColor(255/255, 255/255, 255/255, 96/255)", #match3
+	"love.graphics.setColor(217, 87, 99, 255)" : "love.graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
+	"love.graphics.setColor(172, 50, 50, 255)" : "love.graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
+	"love.graphics.setColor(56, 56, 56, 234)" : "love.graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
 
 }
 
