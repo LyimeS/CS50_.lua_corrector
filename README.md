@@ -24,7 +24,7 @@ Blocks containing the .lua files the script was able to read, and what happened 
 * [pong](https://github.com/games50/pong)
 * [fifty-bird](https://github.com/games50/fifty-bird)
 * [breakout](https://github.com/games50/breakout) <sup>(1 - see notes bellow)</sup>
-* [match3](https://github.com/games50/match3) <sup>(currently in testing)</sup>
+* [match3](https://github.com/games50/match3)
 * [mario-demo](https://github.com/cs50/mario-demo)
 * (more to come)
 
