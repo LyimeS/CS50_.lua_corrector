@@ -84,6 +84,7 @@ terms = {
 	"love.graphics.setColor(217, 87, 99, 255)" : "love.graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
 	"love.graphics.setColor(172, 50, 50, 255)" : "love.graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
 	"love.graphics.setColor(56, 56, 56, 234)" : "love.graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
+	"math.random(255)\n":"math.random(255)/255\n", #AlienMario
 
 }
 
