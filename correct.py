@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 import os
 import glob
@@ -21,7 +21,7 @@ def title (txt):
 # dictionary of terms to be corrected
 #=============================
 terms = {
-	"getPixelScale": "getDPIScale", 
+	"getPixelScale": "getDPIScale",
 	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
 	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
 	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
@@ -84,6 +84,15 @@ terms = {
 	"love.graphics.setColor(217, 87, 99, 255)" : "love.graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
 	"love.graphics.setColor(172, 50, 50, 255)" : "love.graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
 	"love.graphics.setColor(56, 56, 56, 234)" : "love.graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
+	"math.random(255)\n":"math.random(255)/255\n", #AlienMario
+	"love.audio.newSource('sounds/jump.wav')":"love.audio.newSource('sounds/jump.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/death.wav')":"love.audio.newSource('sounds/death.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/powerup-reveal.wav')":"love.audio.newSource('sounds/powerup-reveal.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/pickup.wav')":"love.audio.newSource('sounds/pickup.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/empty-block.wav')":"love.audio.newSource('sounds/empty-block.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/kill.wav')":"love.audio.newSource('sounds/kill.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/kill2.wav')":"love.audio.newSource('sounds/kill2.wav', 'static')", #AlienMario
+	#"":"",
 
 }
 
@@ -93,44 +102,44 @@ terms = {
 errors = 0 #count the number of errors to warn the user at the end of the script
 
 def file_correction(file_path):
-	
+
 	try:
 		data = open(file_path, "r") 	#read the file in a non destructive test.
-	
+
 		text_lines = list() 	#create a list to save all lines inside of it
 		term_found = False
-		
+
 		for line in  data:
-			for term in terms:		#check if one of the terms from the dictionary can be found in the line we're testing 
+			for term in terms:		#check if one of the terms from the dictionary can be found in the line we're testing
 				if term in line:
 					term_found = True
 					line = line.replace(term, terms[term])		#replace the term found for the term in it's meaning
-				
+
 			text_lines.append(line)		#write the line (replaced or not) to the list
-		
+
 		data.close()
 
 
 	except:
-		# files like png, wav and etc. are not readable. 
+		# files like png, wav and etc. are not readable.
 		# It is still useful to handle the files read by the "correct the files in the main folder"
 		# DO NOT DELETE THIS!
 		print("\033[31mNot a readable file.\033[m")
 		return
-	
+
 
 	try:
 		if term_found == True:
 			data = open(file_path, "w") 	#read the file ready to rewrite the file. this might be destructive.
 			for line in text_lines:
 				data.write(line)
-			
+
 			data.close()
 			print("\033[33mLine/s corrected successfully.\033[m")
-		
+
 		else:
 			print("\033[32mNo corrections needed.\033[m")
-	
+
 	except:
 		global errors
 		errors =+1
@@ -158,10 +167,10 @@ folders = list()
 for item in itens:		# It will be used to create the titles on output
 	if os.path.isdir(item):
 		folders.append(item)
-	
+
 	elif os.path.isfile(item): 	#It will be used to run the script in the main folder
 		files.append(item)
-	
+
 
 #=============================
 # correct the files in the main folder
@@ -176,13 +185,13 @@ for file_ in files:
 
 #=============================
 # correct the files in the subfolders
-#=============================	
+#=============================
 # **/       every file and dir under "path"
 # *.txt     every file that ends with '.lua'
 files_subfolder = glob.glob(path + '/**/*.lua', recursive=True) #search for all .lua files in the subfolders
 
 for folder in folders:
-	title(folder)		#create a title in output with the 
+	title(folder)		#create a title in output with the
 	for file_ in files_subfolder:
 		if file_.replace(path, "")[0:len(folder) + 1] == back_slash + folder: 		#compare the name of the folder and the path to the file.
 			print(file_.replace(path, ""), end=" -> ")
@@ -194,8 +203,6 @@ for folder in folders:
 ##############################
 if errors == 0:
 	print("\n\n\033[32mI'm done :)\033[m")
-	
+
 else:
 	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
-
-
