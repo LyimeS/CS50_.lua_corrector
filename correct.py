@@ -92,6 +92,16 @@ terms = {
 	"love.audio.newSource('sounds/empty-block.wav')":"love.audio.newSource('sounds/empty-block.wav', 'static')", #AlienMario
 	"love.audio.newSource('sounds/kill.wav')":"love.audio.newSource('sounds/kill.wav', 'static')", #AlienMario
 	"love.audio.newSource('sounds/kill2.wav')":"love.audio.newSource('sounds/kill2.wav', 'static')", #AlienMario
+	"love.audio.newSource('sounds/music.mp3')":"love.audio.newSource('sounds/music.mp3', 'static')", #The Legend of Zelda
+	"love.audio.newSource('sounds/sword.wav')":"love.audio.newSource('sounds/sword.wav', 'static')", #The Legend of Zelda
+	"love.audio.newSource('sounds/hit_enemy.wav')":"love.audio.newSource('sounds/hit_enemy.wav', 'static')", #The Legend of Zelda
+	"love.audio.newSource('sounds/hit_player.wav')":"love.audio.newSource('sounds/hit_player.wav', 'static')", #The Legend of Zelda
+	"love.audio.newSource('sounds/door.wav')":"love.audio.newSource('sounds/door.wav', 'static')", #The Legend of Zelda
+	"setColor(34, 34, 34, 255)":"setColor(34/255, 34/255, 34/255, 255/255)", #The Legend of Zelda
+	"setColor(175, 53, 42, 255)":"setColor(175/255, 53/255, 42/255, 255/255)", #The Legend of Zelda
+	"setColor(255, 255, 255, 255)":"setColor(255/255, 255/255, 255/255, 255/255)", #The Legend of Zelda
+	#"":"", #The Legend of Zelda
+	#"":"", #The Legend of Zelda
 	#"":"",
 
 }
