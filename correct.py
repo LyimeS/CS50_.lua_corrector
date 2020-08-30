@@ -100,10 +100,7 @@ terms = {
 	"setColor(34, 34, 34, 255)":"setColor(34/255, 34/255, 34/255, 255/255)", #The Legend of Zelda
 	"setColor(175, 53, 42, 255)":"setColor(175/255, 53/255, 42/255, 255/255)", #The Legend of Zelda
 	"setColor(255, 255, 255, 255)":"setColor(255/255, 255/255, 255/255, 255/255)", #The Legend of Zelda
-	#"":"", #The Legend of Zelda
-	#"":"", #The Legend of Zelda
 	#"":"",
-
 }
 
 #=============================
@@ -197,13 +194,13 @@ for file_ in files:
 # correct the files in the subfolders
 #=============================
 # **/       every file and dir under "path"
-# *.txt     every file that ends with '.lua'
+# *.lua     every file that ends with '.lua'
 files_subfolder = glob.glob(path + '/**/*.lua', recursive=True) #search for all .lua files in the subfolders
 
 for folder in folders:
 	title(folder)		#create a title in output with the
 	for file_ in files_subfolder:
-		if file_.replace(path, "")[0:len(folder) + 1] == back_slash + folder: 		#compare the name of the folder and the path to the file.
+		if file_.replace(path, "")[0:len(folder) + 1] == back_slash + folder: 		#compare the name of the folder and the path to the file, to group them on output
 			print(file_.replace(path, ""), end=" -> ")
 			file_correction(file_)		#call the function to correct the file
 
