@@ -100,6 +100,10 @@ terms = {
 	"setColor(34, 34, 34, 255)":"setColor(34/255, 34/255, 34/255, 255/255)", #The Legend of Zelda
 	"setColor(175, 53, 42, 255)":"setColor(175/255, 53/255, 42/255, 255/255)", #The Legend of Zelda
 	"setColor(255, 255, 255, 255)":"setColor(255/255, 255/255, 255/255, 255/255)", #The Legend of Zelda
+	#"through\n\tlove.graphics.stencil":"through\n\tlove.graphics.setCanvas({canvas, stencil=true})\n\tlove.graphics.stencil", #The Legend of Zelda <--- not working
+	# even if the line above was working, it creates a new bug: the player won't be drawn 
+	# find a solution for: src/states/entity/player/PlayerSwingSwordState.lua:95: attempt to index field 'swordHurtbox' (a nil value)
+
 	#"":"",
 }
 
