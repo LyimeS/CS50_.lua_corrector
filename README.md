@@ -28,7 +28,7 @@ Blocks containing the .lua files the script was able to read, and what happened 
 * [mario](https://github.com/games50/mario) (alien version)
 * [mario-demo](https://github.com/cs50/mario-demo) (mario version [from this YouTube video](https://www.youtube.com/watch?v=3k4CMAaNCuk))
 * ~~[zelda](https://github.com/games50/zelda)~~ <sup>(I'm gonna need some help to fix this one)</sup>
-* [angrybirds](https://github.com/games50/angrybirds) (in development)
+* [angrybirds](https://github.com/games50/angrybirds)
 * (more to come)
 
 \* <sub>1 - some deprecated lines yet to be corrected from breakout 10 to 13, as seen in class video. but the game is still working</sub>

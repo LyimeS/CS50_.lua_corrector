@@ -101,9 +101,20 @@ terms = {
 	"setColor(175, 53, 42, 255)":"setColor(175/255, 53/255, 42/255, 255/255)", #The Legend of Zelda
 	"setColor(255, 255, 255, 255)":"setColor(255/255, 255/255, 255/255, 255/255)", #The Legend of Zelda
 	#"through\n\tlove.graphics.stencil":"through\n\tlove.graphics.setCanvas({canvas, stencil=true})\n\tlove.graphics.stencil", #The Legend of Zelda <--- not working
-	# even if the line above was working, it creates a new bug: the player won't be drawn 
+	# even if the line above was working, it creates a new bug: the player won't be drawn
 	# find a solution for: src/states/entity/player/PlayerSwingSwordState.lua:95: attempt to index field 'swordHurtbox' (a nil value)
-
+	"setColor(0, 255, 0, 255)":"setColor(0/255, 255/255, 0/255, 255/255)", # Angry Birds
+	"setColor(255, 0, 0, 255)":"setColor(255/255, 0/255, 0/255, 255/255)", # Angry Birds
+	"math.random(255),":"math.random(255)/255,", # Angry Birds
+	"love.audio.newSource('sounds/break1.wav'),":"love.audio.newSource('sounds/break1.wav', 'static'),", # Angry Birds
+	"love.audio.newSource('sounds/break2.wav'),":"love.audio.newSource('sounds/break2.wav', 'static'),", # Angry Birds
+	"love.audio.newSource('sounds/break3.mp3'),":"love.audio.newSource('sounds/break3.mp3', 'static'),", # Angry Birds
+	"love.audio.newSource('sounds/break4.wav'),":"love.audio.newSource('sounds/break4.wav', 'static'),", # Angry Birds
+	"love.audio.newSource('sounds/break5.wav'),":"love.audio.newSource('sounds/break5.wav', 'static'),", # Angry Birds
+	"love.audio.newSource('sounds/bounce.wav'),":"love.audio.newSource('sounds/bounce.wav', 'static'),", # Angry Birds
+	"graphics.setColor(64, 64, 64, 200)":"graphics.setColor(64/255, 64/255, 64/255, 200/255)", # Angry Birds
+	"graphics.setColor(200, 200, 200, 255)":"graphics.setColor(200/255, 200/255, 200/255, 255/255)", # Angry Birds
+	"graphics.setColor(255, 80, 255, (255 / 12) * i)":"graphics.setColor(255/255, 80/255, 255/255, ((255 / 12) * i)/255)", # Angry Birds
 	#"":"",
 }
 
