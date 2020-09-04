@@ -115,6 +115,20 @@ terms = {
 	"graphics.setColor(64, 64, 64, 200)":"graphics.setColor(64/255, 64/255, 64/255, 200/255)", # Angry Birds
 	"graphics.setColor(200, 200, 200, 255)":"graphics.setColor(200/255, 200/255, 200/255, 255/255)", # Angry Birds
 	"graphics.setColor(255, 80, 255, (255 / 12) * i)":"graphics.setColor(255/255, 80/255, 255/255, ((255 / 12) * i)/255)", # Angry Birds
+	"audio.newSource('sounds/field_music.wav'),":"audio.newSource('sounds/field_music.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/battle_music.mp3'),":"audio.newSource('sounds/battle_music.mp3', 'static'),", #Pokemon
+	"love.audio.newSource('sounds/blip.wav'),":"love.audio.newSource('sounds/blip.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/powerup.wav'),":"audio.newSource('sounds/powerup.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/hit.wav'),":"audio.newSource('sounds/hit.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/run.wav'),":"audio.newSource('sounds/run.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/heal.wav'),":"audio.newSource('sounds/heal.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/exp.wav'),":"audio.newSource('sounds/exp.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/levelup.wav'),":"audio.newSource('sounds/levelup.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/intro.mp3')":"audio.newSource('sounds/intro.mp3', 'static')", #Pokemon
+	"graphics.setColor(24, 24, 24, 255)":"graphics.setColor(24/255, 24/255, 24/255, 255/255) -- text in menu", #Pokemon
+	"graphics.setColor(45, 184, 45, 124)":"graphics.setColor(45/255, 184/255, 45/255, 124/255) -- green circle in menu", #Pokemon
+	"graphics.clear(188, 188, 188, 255)":"graphics.clear(188/255, 188/255, 188/255, 255/255) -- background", #Pokemon
+	#"":"", #Pokemon
 	#"":"",
 }
 
