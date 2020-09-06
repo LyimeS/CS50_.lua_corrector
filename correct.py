@@ -58,7 +58,7 @@ terms = {
 	"['b'] = 54\n":"['b'] = 54/255\n", #Breakout
 	#find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
 	#find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
-	"opacity = 0" : "opacity = 0/255", #match3
+	"opacity = 0\n" : "opacity = 0/255\n", #match3
 	"love.graphics.setColor(255, 255, 255, bird.opacity)" : "love.graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
 	"love.graphics.setColor(255, 255, 255, 128)" : "love.graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
 	"love.graphics.setColor(255, 0, 0, 234)" : "love.graphics.setColor(255/255, 0, 0, 234/255)", #match3
@@ -126,8 +126,14 @@ terms = {
 	"audio.newSource('sounds/levelup.wav'),":"audio.newSource('sounds/levelup.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/intro.mp3')":"audio.newSource('sounds/intro.mp3', 'static')", #Pokemon
 	"graphics.setColor(24, 24, 24, 255)":"graphics.setColor(24/255, 24/255, 24/255, 255/255) -- text in menu", #Pokemon
-	"graphics.setColor(45, 184, 45, 124)":"graphics.setColor(45/255, 184/255, 45/255, 124/255) -- green circle in menu", #Pokemon
+	"graphics.setColor(45, 184, 45, 124)":"graphics.setColor(45/255, 184/255, 45/255, 124/255)", #Pokemon
 	"graphics.clear(188, 188, 188, 255)":"graphics.clear(188/255, 188/255, 188/255, 255/255) -- background", #Pokemon
+	"graphics.clear(214, 214, 214, 255)":"graphics.clear(214/255, 214/255, 214/255, 255/255)", #Pokemon
+	"{r = 189, g = 32, b = 32}":"{r = 189/255, g = 32/255, b = 32/255}", #Pokemon
+	"{r = 32, g = 32, b = 189}":"{r = 32/255, g = 32/255, b = 189/255}", #Pokemon
+	"love.graphics.setColor(56, 56, 56, 255)":"love.graphics.setColor(56/255, 56/255, 56/255, 255/255)", #Pokemon
+	"{opacity = 0}":"{opacity = 0/255}", #Pokemon
+	"r = 255, g = 255, b = 255":"r = 255/255, g = 255/255, b = 255/255", #Pokemon
 	#"":"", #Pokemon
 	#"":"",
 }
