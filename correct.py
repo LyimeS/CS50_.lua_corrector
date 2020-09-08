@@ -23,8 +23,8 @@ def title (txt):
 terms = {
 	"getPixelScale": "getDPIScale",
 	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
-	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
-	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
+	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario-demo
+	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario-demo
 	"love.audio.newSource('sounds/paddle_hit.wav')" : "love.audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
 	"love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
 	"love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
@@ -58,7 +58,7 @@ terms = {
 	"['b'] = 54\n":"['b'] = 54/255\n", #Breakout
 	#find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
 	#find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
-	"opacity = 0" : "opacity = 0/255", #match3
+	"opacity = 0\n" : "opacity = 0/255\n", #match3
 	"love.graphics.setColor(255, 255, 255, bird.opacity)" : "love.graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
 	"love.graphics.setColor(255, 255, 255, 128)" : "love.graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
 	"love.graphics.setColor(255, 0, 0, 234)" : "love.graphics.setColor(255/255, 0, 0, 234/255)", #match3
@@ -115,6 +115,26 @@ terms = {
 	"graphics.setColor(64, 64, 64, 200)":"graphics.setColor(64/255, 64/255, 64/255, 200/255)", # Angry Birds
 	"graphics.setColor(200, 200, 200, 255)":"graphics.setColor(200/255, 200/255, 200/255, 255/255)", # Angry Birds
 	"graphics.setColor(255, 80, 255, (255 / 12) * i)":"graphics.setColor(255/255, 80/255, 255/255, ((255 / 12) * i)/255)", # Angry Birds
+	"audio.newSource('sounds/field_music.wav'),":"audio.newSource('sounds/field_music.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/battle_music.mp3'),":"audio.newSource('sounds/battle_music.mp3', 'static'),", #Pokemon
+	"love.audio.newSource('sounds/blip.wav'),":"love.audio.newSource('sounds/blip.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/powerup.wav'),":"audio.newSource('sounds/powerup.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/hit.wav'),":"audio.newSource('sounds/hit.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/run.wav'),":"audio.newSource('sounds/run.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/heal.wav'),":"audio.newSource('sounds/heal.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/exp.wav'),":"audio.newSource('sounds/exp.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/levelup.wav'),":"audio.newSource('sounds/levelup.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/intro.mp3')":"audio.newSource('sounds/intro.mp3', 'static')", #Pokemon
+	"graphics.setColor(24, 24, 24, 255)":"graphics.setColor(24/255, 24/255, 24/255, 255/255) -- text in menu", #Pokemon
+	"graphics.setColor(45, 184, 45, 124)":"graphics.setColor(45/255, 184/255, 45/255, 124/255)", #Pokemon
+	"graphics.clear(188, 188, 188, 255)":"graphics.clear(188/255, 188/255, 188/255, 255/255) -- background", #Pokemon
+	"graphics.clear(214, 214, 214, 255)":"graphics.clear(214/255, 214/255, 214/255, 255/255)", #Pokemon
+	"{r = 189, g = 32, b = 32}":"{r = 189/255, g = 32/255, b = 32/255}", #Pokemon
+	"{r = 32, g = 32, b = 189}":"{r = 32/255, g = 32/255, b = 189/255}", #Pokemon
+	"love.graphics.setColor(56, 56, 56, 255)":"love.graphics.setColor(56/255, 56/255, 56/255, 255/255)", #Pokemon
+	"{opacity = 0}":"{opacity = 0/255}", #Pokemon
+	"r = 255, g = 255, b = 255":"r = 255/255, g = 255/255, b = 255/255", #Pokemon
+	#"":"", #Pokemon
 	#"":"",
 }
 
@@ -165,7 +185,7 @@ def file_correction(file_path):
 	except:
 		global errors
 		errors =+1
-		print("\033[41mCOULDN'T CORRECT THIS FILE!\033[m")
+		print("\033[41m COULD NOT CORRECT THIS FILE \033[m")
 
 
 
@@ -227,4 +247,4 @@ if errors == 0:
 	print("\n\n\033[32mI'm done :)\033[m")
 
 else:
-	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
+	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nMaybe those files were set to \"read-only\" mode or this scritp has no permission to write in here.\nThe files should be corrected manually, or they might not work correctly\033[m")
