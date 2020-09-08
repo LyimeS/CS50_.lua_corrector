@@ -14,7 +14,7 @@ A python script to update the .lua files shared by CS50 to be read by Löve2D 11
 ## The meaning of "main directory" in here:
 This script will look for **all** the .lua files inside the directory it is located and it will try to correct them. The same goes to its sub-directories.  
 So, let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project. The *correct.py* script should be pasted in the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....) or the folder that contains the *pong* folder among other CS50 projects. This should take about 1 second.  
-In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the patterns to correct in those files, it will try to correct them. Are you sure you want that to happen? <sup>(if your answer was "no", look for instructions [here](https://github.com/LyimeS/CS50_.lua_corrector/tree/pokemom#there-are-some-files-i-dont-want-this-script-to-correct/))</sup>
+In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the patterns to correct in those files, it will try to correct them. Are you sure you want that to happen? <sup>(if your answer was "no", look for instructions [here](https://github.com/LyimeS/CS50_.lua_corrector#there-are-some-files-i-dont-want-this-script-to-correct))</sup>
 
 ## What was I supposed to see in its output?
 The .lua files found by the script and what happened to them. Something like this:  
@@ -30,7 +30,7 @@ The .lua files found by the script and what happened to them. Something like thi
 * [mario-demo](https://github.com/cs50/mario-demo) (mario version [from this YouTube video](https://www.youtube.com/watch?v=3k4CMAaNCuk))
 * ~~[zelda](https://github.com/games50/zelda)~~ <sup>(I'm gonna need some help to fix this one)</sup>
 * [angrybirds](https://github.com/games50/angrybirds)
-* [pokemom](https://github.com/games50/pokemon)
+* [pokemon](https://github.com/games50/pokemon)
 
 \* <sub>1 - some deprecated lines yet to be corrected from breakout 10 to 13, as seen in class video. but the game is still working.</sub>  
 
