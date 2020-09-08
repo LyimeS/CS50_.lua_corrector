@@ -23,8 +23,8 @@ def title (txt):
 terms = {
 	"getPixelScale": "getDPIScale",
 	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
-	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario
-	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario
+	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario-demo
+	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario-demo
 	"love.audio.newSource('sounds/paddle_hit.wav')" : "love.audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
 	"love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
 	"love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
@@ -185,7 +185,7 @@ def file_correction(file_path):
 	except:
 		global errors
 		errors =+1
-		print("\033[41mCOULDN'T CORRECT THIS FILE!\033[m")
+		print("\033[41m COULD NOT CORRECT THIS FILE \033[m")
 
 
 
@@ -247,4 +247,4 @@ if errors == 0:
 	print("\n\n\033[32mI'm done :)\033[m")
 
 else:
-	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nThis may be caused because the files were set to \"read only\" mode.\nThey should be corrected manually\033[m")
+	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nMaybe those files were set to \"read-only\" mode or this scritp has no permission to write in here.\nThe files should be corrected manually, or they might not work correctly\033[m")
