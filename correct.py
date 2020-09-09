@@ -22,24 +22,24 @@ def title (txt):
 #=============================
 terms = {
 	"getPixelScale": "getDPIScale",
-	"love.graphics.clear(40, 45, 52, 255)": "love.graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
-	"love.graphics.clear(108, 140, 255, 255)": "love.graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario-demo
-	"music = love.audio.newSource('music/overworld.mp3')": "music = love.audio.newSource('music/overworld.mp3', 'static')", # mario-demo
-	"love.audio.newSource('sounds/paddle_hit.wav')" : "love.audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/score.wav')" : "love.audio.newSource('sounds/score.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/wall_hit.wav')" : "love.audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/confirm.wav')" : "love.audio.newSource('sounds/confirm.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/select.wav')" : "love.audio.newSource('sounds/select.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/no-select.wav')" : "love.audio.newSource('sounds/no-select.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/brick-hit-1.wav')" : "love.audio.newSource('sounds/brick-hit-1.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/brick-hit-2.wav')" : "love.audio.newSource('sounds/brick-hit-2.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/hurt.wav')" : "love.audio.newSource('sounds/hurt.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/victory.wav')" : "love.audio.newSource('sounds/victory.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/recover.wav')" : "love.audio.newSource('sounds/recover.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/high_score.wav')" : "love.audio.newSource('sounds/high_score.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/pause.wav')" : "love.audio.newSource('sounds/pause.wav', 'static')", #Breakout
-	"love.audio.newSource('sounds/music.wav')" : "love.audio.newSource('sounds/music.wav', 'static')", #Breakout
-	"love.graphics.setColor(103, 255, 255, 255)":"love.graphics.setColor(103/255, 255/255, 255/255, 255/255)", #Breakout
+	"graphics.clear(40, 45, 52, 255)": "graphics.clear(40/255, 45/255, 52/255, 1)",  # pong
+	"graphics.clear(108, 140, 255, 255)": "graphics.clear(108/255, 140/255, 255/255, 255/255)", # mario-demo
+	"audio.newSource('music/overworld.mp3')": "audio.newSource('music/overworld.mp3', 'static')", # mario-demo
+	"audio.newSource('sounds/paddle_hit.wav')" : "audio.newSource('sounds/paddle_hit.wav', 'static')", #Breakout
+	"audio.newSource('sounds/score.wav')" : "audio.newSource('sounds/score.wav', 'static')", #Breakout
+	"audio.newSource('sounds/wall_hit.wav')" : "audio.newSource('sounds/wall_hit.wav', 'static')", #Breakout
+	"audio.newSource('sounds/confirm.wav')" : "audio.newSource('sounds/confirm.wav', 'static')", #Breakout
+	"audio.newSource('sounds/select.wav')" : "audio.newSource('sounds/select.wav', 'static')", #Breakout
+	"audio.newSource('sounds/no-select.wav')" : "audio.newSource('sounds/no-select.wav', 'static')", #Breakout
+	"audio.newSource('sounds/brick-hit-1.wav')" : "audio.newSource('sounds/brick-hit-1.wav', 'static')", #Breakout
+	"audio.newSource('sounds/brick-hit-2.wav')" : "audio.newSource('sounds/brick-hit-2.wav', 'static')", #Breakout
+	"audio.newSource('sounds/hurt.wav')" : "audio.newSource('sounds/hurt.wav', 'static')", #Breakout
+	"audio.newSource('sounds/victory.wav')" : "audio.newSource('sounds/victory.wav', 'static')", #Breakout
+	"audio.newSource('sounds/recover.wav')" : "audio.newSource('sounds/recover.wav', 'static')", #Breakout
+	"audio.newSource('sounds/high_score.wav')" : "audio.newSource('sounds/high_score.wav', 'static')", #Breakout
+	"audio.newSource('sounds/pause.wav')" : "audio.newSource('sounds/pause.wav', 'static')", #Breakout
+	"audio.newSource('sounds/music.wav')" : "audio.newSource('sounds/music.wav', 'static')", #Breakout
+	"graphics.setColor(103, 255, 255, 255)":"graphics.setColor(103/255, 255/255, 255/255, 255/255)", #Breakout
 	"self.psystem:setAreaSpread('normal', 10, 10)" : "self.psystem:setEmissionArea('normal', 10, 10)", #Breakout
 	"['r'] = 99,":"['r'] = 99/255,", #Breakout
 	"['g'] = 155,":"['g'] = 155/255,", #Breakout
@@ -59,44 +59,44 @@ terms = {
 	#find a solution for Breakout 10: main.lua:216: Using deprecated function: love.filesystem.exists (replaced by love.filesystem.getInfo),
 	#find a solution for Breakout 10: src/states/StartState.lua:24: attempt to index local 'params' (a nil value)
 	"opacity = 0\n" : "opacity = 0/255\n", #match3
-	"love.graphics.setColor(255, 255, 255, bird.opacity)" : "love.graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
-	"love.graphics.setColor(255, 255, 255, 128)" : "love.graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
-	"love.graphics.setColor(255, 0, 0, 234)" : "love.graphics.setColor(255/255, 0, 0, 234/255)", #match3
-	"love.audio.newSource('sounds/music3.mp3')" : "love.audio.newSource('sounds/music3.mp3', 'static')", #match3
-	"love.audio.newSource('sounds/error.wav')" : "love.audio.newSource('sounds/error.wav', 'static')", #match3
-	"love.audio.newSource('sounds/match.wav')" : "love.audio.newSource('sounds/match.wav', 'static')", #match3
-	"love.audio.newSource('sounds/clock.wav')" : "love.audio.newSource('sounds/clock.wav', 'static')", #match3
-	"love.audio.newSource('sounds/game-over.wav')" : "love.audio.newSource('sounds/game-over.wav', 'static')", #match3
-	"love.audio.newSource('sounds/next-level.wav')" : "love.audio.newSource('sounds/next-level.wav', 'static')", #match3
+	"graphics.setColor(255, 255, 255, bird.opacity)" : "graphics.setColor(255/255, 255/255, 255/255, bird.opacity)", #match3
+	"graphics.setColor(255, 255, 255, 128)" : "graphics.setColor(255/255, 255/255, 255/255, 128/255)", #match3
+	"graphics.setColor(255, 0, 0, 234)" : "graphics.setColor(255/255, 0, 0, 234/255)", #match3
+	"audio.newSource('sounds/music3.mp3')" : "audio.newSource('sounds/music3.mp3', 'static')", #match3
+	"audio.newSource('sounds/error.wav')" : "audio.newSource('sounds/error.wav', 'static')", #match3
+	"audio.newSource('sounds/match.wav')" : "audio.newSource('sounds/match.wav', 'static')", #match3
+	"audio.newSource('sounds/clock.wav')" : "audio.newSource('sounds/clock.wav', 'static')", #match3
+	"audio.newSource('sounds/game-over.wav')" : "audio.newSource('sounds/game-over.wav', 'static')", #match3
+	"audio.newSource('sounds/next-level.wav')" : "audio.newSource('sounds/next-level.wav', 'static')", #match3
 	"[1] = {217, 87, 99, 255}" : "[1] = {217/255, 87/255, 99/255, 255/255}", #match3
 	"[2] = {95, 205, 228, 255}" : "[2] = {95/255, 205/255, 228/255, 255/255}", #match3
 	"[3] = {251, 242, 54, 255}" : "[3] = {251/255, 242/255, 54/255, 255/255}", #match3
 	"[4] = {118, 66, 138, 255}" : "[4] = {118/255, 66/255, 138/255, 255/255}", #match3
 	"[5] = {153, 229, 80, 255}" : "[5] = {153/255, 229/255, 80/255, 255/255}", #match3
 	"[6] = {223, 113, 38, 255}" : "[6] = {223/255, 113/255, 38/255, 255/255}", #match3
-	"love.graphics.setColor(0, 0, 0, 128)" : "love.graphics.setColor(0, 0, 0, 128/255)", #match3
-	"love.graphics.setColor(99, 155, 255, 255)" : "love.graphics.setColor(99/255, 155/255, 255/255, 255/255)", #match3
-	"love.graphics.setColor(48, 96, 130, 255)" : "love.graphics.setColor(48/255, 96/255, 130/255, 255/255)", #match3
-	"love.graphics.setColor(34, 32, 52, 255)" : "love.graphics.setColor(34/255, 32/255, 52/255, 255/255)", #match3
-	"love.graphics.setColor(95, 205, 228, 200)" : "love.graphics.setColor(95/255, 205/255, 228/255, 200/255)", #match3
-	"love.graphics.setColor(255, 255, 255, self.transitionAlpha)" : "love.graphics.setColor(255/255, 255/255, 255/255, self.transitionAlpha/255)", #match3
-	"love.graphics.setColor(255, 255, 255, 96)" : "love.graphics.setColor(255/255, 255/255, 255/255, 96/255)", #match3
-	"love.graphics.setColor(217, 87, 99, 255)" : "love.graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
-	"love.graphics.setColor(172, 50, 50, 255)" : "love.graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
-	"love.graphics.setColor(56, 56, 56, 234)" : "love.graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
+	"graphics.setColor(0, 0, 0, 128)" : "graphics.setColor(0, 0, 0, 128/255)", #match3
+	"graphics.setColor(99, 155, 255, 255)" : "graphics.setColor(99/255, 155/255, 255/255, 255/255)", #match3
+	"graphics.setColor(48, 96, 130, 255)" : "graphics.setColor(48/255, 96/255, 130/255, 255/255)", #match3
+	"graphics.setColor(34, 32, 52, 255)" : "graphics.setColor(34/255, 32/255, 52/255, 255/255)", #match3
+	"graphics.setColor(95, 205, 228, 200)" : "graphics.setColor(95/255, 205/255, 228/255, 200/255)", #match3
+	"graphics.setColor(255, 255, 255, self.transitionAlpha)" : "graphics.setColor(255/255, 255/255, 255/255, self.transitionAlpha/255)", #match3
+	"graphics.setColor(255, 255, 255, 96)" : "graphics.setColor(255/255, 255/255, 255/255, 96/255)", #match3
+	"graphics.setColor(217, 87, 99, 255)" : "graphics.setColor(217/255, 87/255, 99/255, 255/255)", #match3
+	"graphics.setColor(172, 50, 50, 255)" : "graphics.setColor(172/255, 50/255, 50/255, 255/255)", #match3
+	"graphics.setColor(56, 56, 56, 234)" : "graphics.setColor(56/255, 56/255, 56/255, 234/255)", #match3
 	"math.random(255)\n":"math.random(255)/255\n", #AlienMario
-	"love.audio.newSource('sounds/jump.wav')":"love.audio.newSource('sounds/jump.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/death.wav')":"love.audio.newSource('sounds/death.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/powerup-reveal.wav')":"love.audio.newSource('sounds/powerup-reveal.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/pickup.wav')":"love.audio.newSource('sounds/pickup.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/empty-block.wav')":"love.audio.newSource('sounds/empty-block.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/kill.wav')":"love.audio.newSource('sounds/kill.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/kill2.wav')":"love.audio.newSource('sounds/kill2.wav', 'static')", #AlienMario
-	"love.audio.newSource('sounds/music.mp3')":"love.audio.newSource('sounds/music.mp3', 'static')", #The Legend of Zelda
-	"love.audio.newSource('sounds/sword.wav')":"love.audio.newSource('sounds/sword.wav', 'static')", #The Legend of Zelda
-	"love.audio.newSource('sounds/hit_enemy.wav')":"love.audio.newSource('sounds/hit_enemy.wav', 'static')", #The Legend of Zelda
-	"love.audio.newSource('sounds/hit_player.wav')":"love.audio.newSource('sounds/hit_player.wav', 'static')", #The Legend of Zelda
-	"love.audio.newSource('sounds/door.wav')":"love.audio.newSource('sounds/door.wav', 'static')", #The Legend of Zelda
+	"audio.newSource('sounds/jump.wav')":"audio.newSource('sounds/jump.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/death.wav')":"audio.newSource('sounds/death.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/powerup-reveal.wav')":"audio.newSource('sounds/powerup-reveal.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/pickup.wav')":"audio.newSource('sounds/pickup.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/empty-block.wav')":"audio.newSource('sounds/empty-block.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/kill.wav')":"audio.newSource('sounds/kill.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/kill2.wav')":"audio.newSource('sounds/kill2.wav', 'static')", #AlienMario
+	"audio.newSource('sounds/music.mp3')":"audio.newSource('sounds/music.mp3', 'static')", #The Legend of Zelda
+	"audio.newSource('sounds/sword.wav')":"audio.newSource('sounds/sword.wav', 'static')", #The Legend of Zelda
+	"audio.newSource('sounds/hit_enemy.wav')":"audio.newSource('sounds/hit_enemy.wav', 'static')", #The Legend of Zelda
+	"audio.newSource('sounds/hit_player.wav')":"audio.newSource('sounds/hit_player.wav', 'static')", #The Legend of Zelda
+	"audio.newSource('sounds/door.wav')":"audio.newSource('sounds/door.wav', 'static')", #The Legend of Zelda
 	"setColor(34, 34, 34, 255)":"setColor(34/255, 34/255, 34/255, 255/255)", #The Legend of Zelda
 	"setColor(175, 53, 42, 255)":"setColor(175/255, 53/255, 42/255, 255/255)", #The Legend of Zelda
 	"setColor(255, 255, 255, 255)":"setColor(255/255, 255/255, 255/255, 255/255)", #The Legend of Zelda
@@ -106,18 +106,18 @@ terms = {
 	"setColor(0, 255, 0, 255)":"setColor(0/255, 255/255, 0/255, 255/255)", # Angry Birds
 	"setColor(255, 0, 0, 255)":"setColor(255/255, 0/255, 0/255, 255/255)", # Angry Birds
 	"math.random(255),":"math.random(255)/255,", # Angry Birds
-	"love.audio.newSource('sounds/break1.wav'),":"love.audio.newSource('sounds/break1.wav', 'static'),", # Angry Birds
-	"love.audio.newSource('sounds/break2.wav'),":"love.audio.newSource('sounds/break2.wav', 'static'),", # Angry Birds
-	"love.audio.newSource('sounds/break3.mp3'),":"love.audio.newSource('sounds/break3.mp3', 'static'),", # Angry Birds
-	"love.audio.newSource('sounds/break4.wav'),":"love.audio.newSource('sounds/break4.wav', 'static'),", # Angry Birds
-	"love.audio.newSource('sounds/break5.wav'),":"love.audio.newSource('sounds/break5.wav', 'static'),", # Angry Birds
-	"love.audio.newSource('sounds/bounce.wav'),":"love.audio.newSource('sounds/bounce.wav', 'static'),", # Angry Birds
+	"audio.newSource('sounds/break1.wav'),":"audio.newSource('sounds/break1.wav', 'static'),", # Angry Birds
+	"audio.newSource('sounds/break2.wav'),":"audio.newSource('sounds/break2.wav', 'static'),", # Angry Birds
+	"audio.newSource('sounds/break3.mp3'),":"audio.newSource('sounds/break3.mp3', 'static'),", # Angry Birds
+	"audio.newSource('sounds/break4.wav'),":"audio.newSource('sounds/break4.wav', 'static'),", # Angry Birds
+	"audio.newSource('sounds/break5.wav'),":"audio.newSource('sounds/break5.wav', 'static'),", # Angry Birds
+	"audio.newSource('sounds/bounce.wav'),":"audio.newSource('sounds/bounce.wav', 'static'),", # Angry Birds
 	"graphics.setColor(64, 64, 64, 200)":"graphics.setColor(64/255, 64/255, 64/255, 200/255)", # Angry Birds
 	"graphics.setColor(200, 200, 200, 255)":"graphics.setColor(200/255, 200/255, 200/255, 255/255)", # Angry Birds
 	"graphics.setColor(255, 80, 255, (255 / 12) * i)":"graphics.setColor(255/255, 80/255, 255/255, ((255 / 12) * i)/255)", # Angry Birds
 	"audio.newSource('sounds/field_music.wav'),":"audio.newSource('sounds/field_music.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/battle_music.mp3'),":"audio.newSource('sounds/battle_music.mp3', 'static'),", #Pokemon
-	"love.audio.newSource('sounds/blip.wav'),":"love.audio.newSource('sounds/blip.wav', 'static'),", #Pokemon
+	"audio.newSource('sounds/blip.wav'),":"audio.newSource('sounds/blip.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/powerup.wav'),":"audio.newSource('sounds/powerup.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/hit.wav'),":"audio.newSource('sounds/hit.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/run.wav'),":"audio.newSource('sounds/run.wav', 'static'),", #Pokemon
@@ -125,16 +125,15 @@ terms = {
 	"audio.newSource('sounds/exp.wav'),":"audio.newSource('sounds/exp.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/levelup.wav'),":"audio.newSource('sounds/levelup.wav', 'static'),", #Pokemon
 	"audio.newSource('sounds/intro.mp3')":"audio.newSource('sounds/intro.mp3', 'static')", #Pokemon
-	"graphics.setColor(24, 24, 24, 255)":"graphics.setColor(24/255, 24/255, 24/255, 255/255) -- text in menu", #Pokemon
+	"graphics.setColor(24, 24, 24, 255)":"graphics.setColor(24/255, 24/255, 24/255, 255/255)", #Pokemon
 	"graphics.setColor(45, 184, 45, 124)":"graphics.setColor(45/255, 184/255, 45/255, 124/255)", #Pokemon
-	"graphics.clear(188, 188, 188, 255)":"graphics.clear(188/255, 188/255, 188/255, 255/255) -- background", #Pokemon
+	"graphics.clear(188, 188, 188, 255)":"graphics.clear(188/255, 188/255, 188/255, 255/255)", #Pokemon
 	"graphics.clear(214, 214, 214, 255)":"graphics.clear(214/255, 214/255, 214/255, 255/255)", #Pokemon
 	"{r = 189, g = 32, b = 32}":"{r = 189/255, g = 32/255, b = 32/255}", #Pokemon
 	"{r = 32, g = 32, b = 189}":"{r = 32/255, g = 32/255, b = 189/255}", #Pokemon
 	"love.graphics.setColor(56, 56, 56, 255)":"love.graphics.setColor(56/255, 56/255, 56/255, 255/255)", #Pokemon
 	"{opacity = 0}":"{opacity = 0/255}", #Pokemon
 	"r = 255, g = 255, b = 255":"r = 255/255, g = 255/255, b = 255/255", #Pokemon
-	#"":"", #Pokemon
 	#"":"",
 }
 
@@ -160,7 +159,6 @@ def file_correction(file_path):
 			text_lines.append(line)		#write the line (replaced or not) to the list
 
 		data.close()
-
 
 	except:
 		# files like png, wav and etc. are not readable.
@@ -188,7 +186,6 @@ def file_correction(file_path):
 		print("\033[41m COULD NOT CORRECT THIS FILE \033[m")
 
 
-
 #########################################################
 # Folder, subfolders and files Info
 #########################################################
@@ -202,8 +199,8 @@ else:
 	back_slash = "/"
 
 
-files = list()
-folders = list()
+files = list()		# all files in main folder
+folders = list()	# .lua files in subfolders
 
 
 for item in itens:		# It will be used to create the titles on output
@@ -222,7 +219,6 @@ for file_ in files:
 	if file_ != __file__:		#prevents the script of rewriting itself.
 		print(f"{file_}", end=" -> ")
 		file_correction(path + back_slash + file_)		#call the function to correct the file
-
 
 
 #=============================
