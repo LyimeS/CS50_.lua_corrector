@@ -1,21 +1,35 @@
 # CS50 .lua corrector
-A python script to update the .lua files shared by CS50 to be read by Löve2D 11.3
+A python script to update the .lua files shared by CS50 to be read by Löve 11.3
 
 # What you should know before using it:
 * **The script *correct.py* is the only file in here you really need.** It runs with Python 3. <sup>(need help? [click here](https://realpython.com/installing-python/))</sup>
-* It was made thinking to run in Linux. It should be working fine in Windows and MacOS by now, but I didn't test it yet.
-* Even though it should be safe to run this script, it is a good practice to have a backup of the .lua files before running it. But if the worst happens, you can download them again, right?
-* It is also a good practice not to keep those files open in an IDE or in Löve2D while the script is running.
+* It was made thinking to run in Linux. It should be working fine in Windows and MacOS by now, but I didn't test it yet. *
+* Even though it should be safe to run this script, it is a good practice to have a backup of the *.lua* files before running it. But if the worst happens, you can download them again, right?
+* It is also a good practice not to keep those files open in an IDE or in Löve while the script is running.\
+<sup>* Edit: I believe the font colors aren't working when running it on Windows' cmd, PowerShell nor Python IDLE. But this is just an aesthetic detail. In this case, you may notice some "\033\[XXm" in the output.</sup>
 
 # How to use it:
-1. Paste the script *correct.py* in the main directory of a project shared by CS50, or a folder that contains it. <sup>(more informations in the section bellow)</sup>
-2. Run the script: Open the main directory in terminal and type `python3 "correct.py"` <sup> (need help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line)) </sup>  
-This process should take less than 1 second.  
+There are two ways to use this script:
+## Specifying the directory of the files:
+* Run the script in terminal (in Windows: *cmd* or *PowerShell*) by typping `python3 "path/to/correct.py" path/to/directory/with/CS50/files`.
+* The script will look for **all** files inside of the specified directory, and for all the files inside all its sub-directories.
+<sup>note 1: if the command `python3` fail, you can try `python` (more help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line))</sup>\
+<sup>note 2: although it may occasionally work, specifying the path to a single file is not fully supported yet.</sup>
 
-## The meaning of "main directory" in here:
-This script will look for **all** the .lua files inside the directory it is located and it will try to correct them. The same goes to its sub-directories.  
-So, let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project. The *correct.py* script should be pasted in the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....) or the folder that contains the *pong* folder among other CS50 projects.  
-In case of this folder containing other .lua files (or folders that contains other .lua files) that are not from CS50, these files will be scanned too, and if the script find the patterns to correct in those files, it will try to correct them. Are you sure you want that to happen? <sup>(if your answer was "no", look for instructions [here](https://github.com/LyimeS/CS50_.lua_corrector#there-are-some-files-i-dont-want-this-script-to-correct))</sup>
+
+## Without specifying the directory
+* If there's no specified directory, the script will look for **all** files inside of the directory the script *correct.py* is located, and all the files inside all its sub-directories.
+* To run the script then: type `python3 "path/to/correct.py"`\
+<sup>note 1: if the command `python3` fail, you can try `python` (more help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line))</sup>
+
+
+## Examples:
+Let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project.
+* Specifying the path to the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....): `python3 "path/to/correct.py" path/to/pong`
+* Specifying one of the sub-directories of *pong* folder: `python3 "path/to/correct.py" path/to/pong/pong-0`
+* If you downloaded more than one project from CS50, you can specify the directory where they are located to correct them all:  `python3 "path/to/correct.py" path/to/CS50_Projects`
+* Paste the script in the *pong* directory and run: `python3 "path/to/pong/correct.py"`
+* Paste the script in the directory containing other projects from CS50 and run: `python3 "path/to/CS50_Projects/correct.py"`
 
 ## What was I supposed to see in its output?
 The .lua files found by the script and what happened to them. Something like this:  
