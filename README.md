@@ -11,8 +11,8 @@ A python script to update the .lua files shared by CS50 to be read by Löve 11.3
 # How to use it:
 There are two ways to use this script:
 ## Specifying the directory of the files:
-* Run the script in terminal (in Windows: *cmd* or *PowerShell*) by typping `python3 "path/to/correct.py" path/to/directory/with/CS50/files`.\
-* The script will look for **all** files inside of the specified directory, and for all the files inside all its sub-directories.\
+* Run the script in terminal (in Windows: *cmd* or *PowerShell*) by typping `python3 "path/to/correct.py" path/to/directory/with/CS50/files`.
+* The script will look for **all** files inside of the specified directory, and for all the files inside all its sub-directories.
 <sup>note 1: if the command `python3` fail, you can try `python` (more help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line))</sup>\
 <sup>note 2: although it may occasionally work, specifying the path to a single file is not fully supported yet.</sup>
 
@@ -25,11 +25,11 @@ There are two ways to use this script:
 
 ## Examples:
 Let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project.
-* Specifying the path to the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....): `python3 "path/to/correct.py" path/to/pong`\
-* Specifying one of the sub-directories of *pong* folder: `python3 "path/to/correct.py" path/to/pong/pong-0`\
-* If you downloaded more than one project from CS50, you can specify the directory where they are located to correct them all:  `python3 "path/to/correct.py" path/to/CS50_Projects`\
-* Paste the script in the *pong* directory and run: `python3 "path/to/pong/correct.py"`\
-* Paste the script in the directory containing other projects from CS50 and run: `python3 "path/to/CS50_Projects/correct.py"`\
+* Specifying the path to the *pong* folder (which contains *"pong-0"*, *"pong-1"*, *"pong-2"*....): `python3 "path/to/correct.py" path/to/pong`
+* Specifying one of the sub-directories of *pong* folder: `python3 "path/to/correct.py" path/to/pong/pong-0`
+* If you downloaded more than one project from CS50, you can specify the directory where they are located to correct them all:  `python3 "path/to/correct.py" path/to/CS50_Projects`
+* Paste the script in the *pong* directory and run: `python3 "path/to/pong/correct.py"`
+* Paste the script in the directory containing other projects from CS50 and run: `python3 "path/to/CS50_Projects/correct.py"`
 
 ## What was I supposed to see in its output?
 The .lua files found by the script and what happened to them. Something like this:  
