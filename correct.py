@@ -6,7 +6,7 @@ import glob
 import sys
 
 #########################################################
-# FORMAT Title
+# FORMAT Title (just an aesthetic detail)
 #########################################################
 def title (txt):
 	print("-" * len(txt), end="-- \n")
@@ -140,19 +140,24 @@ terms = {
 # function correct
 #=============================
 errors = 0 #count the number of errors to warn the user at the end of the script
+total_corrections = 0
 
 def file_correction(file_path):
+	global total_corrections
 
 	try:
 		data = open(file_path, "r") 	#read the file in a non destructive test.
 
 		text_lines = list() 	#create a list to save all lines inside of it
 		term_found = False
+		corrections = 0
 
 		for line in  data:
 			for term in terms:		#check if one of the terms from the dictionary can be found in the line we're testing
 				if term in line:
 					term_found = True
+					total_corrections += 1
+					corrections += 1
 					line = line.replace(term, terms[term])		#replace the term found for the term in it's meaning
 
 			text_lines.append(line)		#write the line (replaced or not) to the list
@@ -174,7 +179,7 @@ def file_correction(file_path):
 				data.write(line)
 
 			data.close()
-			print("\033[33mLine/s corrected successfully.\033[m")
+			print(f"\033[33m{corrections} Line/s corrected successfully.\033[m")
 
 		else:
 			print("\033[32mNo corrections needed.\033[m")
@@ -190,18 +195,19 @@ def file_correction(file_path):
 #########################################################
 
 try:
-	path = " ".join(sys.argv[1:]) #path in case it is passed as argument when running this script
+	path = " ".join(sys.argv[1:]) #path used in case it is passed as argument when running this script
 	
 	try:
 		itens = os.listdir(path)
 	except FileNotFoundError:
-		print(path)
+		#print(path)
 		print("\033[41m couldn't find this directory \033[m")
 		print("Please verify the specified path")
 		print("in case you tried to specify a file, this is not fully supported yet, although it may occasionally work")
 		quit()
 	except NotADirectoryError: # < might not work
 		if os.path.isfile(path):
+			print(path, end=" -> ")
 			file_correction(path)
 			quit()
 		else:
@@ -209,9 +215,9 @@ try:
 			print("Please verify the specified path")			
 			quit()
 		
-except IndexError:
+except IndexError: # path in case there's no argument.
 	print(f"Using the current location of {__file__}:")
-	path = os.getcwd() # path in case there's no argument
+	path = os.getcwd()  #the path will be the path where this script is located
 	print(path)
 	itens = os.listdir(path)
 
@@ -262,16 +268,16 @@ for folder in folders:
 	
 	for file_ in files_subfolder:
 		#print(folder.replace(path,"")[1:], " ", file_.replace(path,"").split(back_slash)[1])
-		if folder.replace(path,"")[1:] == file_.replace(path,"").split(back_slash)[1]:
+		if folder.replace(path,"")[1:] == file_.replace(path,"").split(back_slash)[1]: #compare the name of the folder and the path to the file, to group them on output
 			print(file_.replace(path,""), end=" -> ")
-			file_correction(file_)		#call the function to correct the file
+			file_correction(file_)	#call the function to correct the file
 
 
 ##############################
 # The end:
 ##############################
 if errors == 0:
-	print("\n\n\033[32mI'm done :)\033[m")
+	print(f"\n\n\033[32mI'm done :) \n{total_corrections} lines corrected \033[m")
 
 else:
 	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nMaybe those files were set to \"read-only\" mode or this scritp has no permission to write in here.\nThe files should be corrected manually, or they might not work correctly\033[m")
