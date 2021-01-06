@@ -280,4 +280,7 @@ if errors == 0:
 	print(f"\n\n\033[32mI'm done :) \n{total_corrections} lines corrected \033[m")
 
 else:
-	print(f"\n\n\033[33mI'm done, but #{errors} error/s were found. \nMaybe those files were set to \"read-only\" mode or this scritp has no permission to write in here.\nThe files should be corrected manually, or they might not work correctly\033[m")
+	print(f"""\n\n\033[33mI'm done, but #{errors} error/s were found. 
+	\nMaybe those files were set to \"read-only\" mode or this scritp has no permission to write in here.
+	\nThe files should be corrected manually, or they might not work correctly.
+	\nBut {total_corrections} lines were corrected \033[m""")
