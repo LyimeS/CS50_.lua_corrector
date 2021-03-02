@@ -1,27 +1,27 @@
 # CS50 .lua corrector
-A python script to update the .lua files shared by CS50 to be read by Löve 11.3
+A python script to update the .lua files shared by CS50 to be read by Löve 11.3. Imagine this script as a spell checker.
 
 # What you should know before using it:
 * **The script *correct.py* is the only file in here you really need.** It runs with Python 3. <sup>(need help? [click here](https://realpython.com/installing-python/))</sup>
 * It was made thinking to run in Linux. It should be working fine in Windows and MacOS by now, but I didn't test it yet. *
 * Even though it should be safe to run this script, it is a good practice to have a backup of the *.lua* files before running it. But if the worst happens, you can download them again, right?
 * It is also a good practice not to keep those files open in an IDE or in Löve while the script is running.\
-<sup>* Edit: I believe the font colors aren't working when running it on Windows' cmd, PowerShell nor Python IDLE. But this is just an aesthetic detail. In this case, you may notice some "\033\[XXm" in the output.</sup>
+
+<sup>* Edit: I believe the font colors aren't working when running it on Windows' cmd, PowerShell nor Python IDLE. But this is just an aesthetic detail. In this case, you may notice some ```\033\[XXm``` in [the output](https://github.com/LyimeS/CS50_.lua_corrector#what-was-i-supposed-to-see-in-its-output).</sup>
 
 # How to use it:
 There are two ways to use this script:
 ## Specifying the directory of the files:
-* Run the script in terminal (in Windows: *cmd* or *PowerShell*) by typping `python3 "path/to/correct.py" path/to/directory/with/CS50/files`.
+* Run the script in terminal* by typping `python3 "path/to/correct.py" path/to/directory/with/CS50/files` \*\*.
 * The script will look for **all** files inside of the specified directory, and for all the files inside all its sub-directories.
-<sup>note 1: if the command `python3` fail, you can try `python` (more help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line))</sup>\
-<sup>note 2: although it may occasionally work, specifying the path to a single file is not fully supported yet.</sup>
-
+<sup>note: although it may occasionally work, specifying the path to a single file is not fully supported yet.</sup>
 
 ## Without specifying the directory
 * If there's no specified directory, the script will look for **all** files inside of the directory the script *correct.py* is located, and all the files inside all its sub-directories.
-* To run the script then: type `python3 "path/to/correct.py"`\
-<sup>note 1: if the command `python3` fail, you can try `python` (more help? [click here](https://realpython.com/interacting-with-python/#running-a-python-script-from-the-command-line))</sup>
+* To run the script then: type `python3 "path/to/correct.py"` \*\* \
 
+\* (For Windows' users: "*terminal*" means "*cmd*" or "*PowerShell*". I can't remember how to use it with Python IDLE)
+\*\* (On Windows 7, try to replace `python3` with `py`. On Windows 10, try to replace `"python3"` with `"python"`. On Windows 8/8.1: I have no idea)
 
 ## Examples:
 Let's suppose you want to correct the files from the [pong](https://github.com/games50/pong) project.
