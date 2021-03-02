@@ -18,7 +18,7 @@ There are two ways to use this script:
 
 ## Without specifying the directory
 * If there's no specified directory, the script will look for **all** files inside of the directory the script *correct.py* is located, and all the files inside all its sub-directories.
-* To run the script then: type `python3 "path/to/correct.py"` \*\*
+* To run the script then: type `python3 "path/to/correct.py"` in terminal\* \*\*
 
 \* (For Windows' users: "*terminal*" means "*cmd*" or "*PowerShell*". I can't remember how to use it with Python IDLE)\
 \*\* (On Windows 7, try to replace `python3` with `py`. On Windows 10, try to replace `"python3"` with `"python"`. On Windows 8/8.1, I have no idea)
@@ -33,8 +33,8 @@ Let's suppose you want to correct the files from the [pong](https://github.com/g
 
 ## What was I supposed to see in its output?
 The .lua files found by the script and what happened to them. Something like this:  
-![correcting the pong project](output_sample.png)
-<sup>As mentioned before, when using Windows' cmd, PowerShell or Python IDLE, you may not see the colors in the output, but again, this is just an aesthetic detail</sup>
+![correcting the pong project](output_sample.png)\
+<sup>As mentioned before, when using Windows' cmd, PowerShell or Python IDLE, you may not see the colors in the output, but again, this is just an aesthetic detail.</sup>
 
 # Things you may be wondering:
 ## What projects from CS50 does this script corrects?
@@ -54,7 +54,7 @@ The .lua files found by the script and what happened to them. Something like thi
 You can set those files as "read-only" files. It worked for me (in Linux), but I can't promise you it will work for you.  
 Read again that "*it is a good practice to have a backup of the .lua files before running it*" part.  
 In that case, the output should look like this:
-![main.lua in Read-Only mode](read-only.png)
+![main.lua in Read-Only mode](read-only.png)\
 (setting the file *main.lua* as read-only)
 
 ## I have found a bug.
