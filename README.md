@@ -53,7 +53,7 @@ The .lua files found by the script and what happened to them. Something like thi
 ## There are some files I don't want this script to correct.
 You can set those files as "read-only" files. It worked for me (in Linux), but I can't promise you it will work for you.  
 Read again that "*it is a good practice to have a backup of the .lua files before running it*" part.  
-In that case, the output should look like this:
+In that case, the output should look like this:\
 ![main.lua in Read-Only mode](read-only.png)\
 (setting the file *main.lua* as read-only)
 
